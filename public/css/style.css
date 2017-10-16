@@ -1,0 +1,81 @@
+
+body {
+    padding-top: 5.5rem;
+  }
+  
+
+  h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+  }
+  
+
+  #buttonUpdateTruckload{
+    margin-left: 20px !important;
+  }
+  
+   .modal-title {
+    margin-right: 150px;
+   }
+  .modal-body .form-horizontal .col-sm-2,
+  .modal-body .form-horizontal .col-sm-10 {
+      width: 100%
+  }
+  
+  .modal-body .form-horizontal .control-label {
+      text-align: left;
+  }
+  .modal-body .form-horizontal .col-sm-offset-2 {
+      margin-left: 15px;
+  }
+
+  #logo{
+  
+    width: 40px;
+    margin-right: 5px;
+  
+  }
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+    border-right: 1px solid #eee;
+  }
+  
+
+  .sidebar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .sidebar .nav {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .nav-item {
+    width: 100%;
+  }
+  
+  .sidebar .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  
+  .sidebar .nav-link {
+    border-radius: 0;
+  }
+
+  .placeholders {
+    padding-bottom: 3rem;
+  }
+  
+  .placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
