@@ -4,9 +4,7 @@ var methodOverride = require("method-override");
 var path = require("path");
 
 var app = express();
-var port_number = server.listen(process.env.PORT || 3000);
-
-
+var port = process.env.port || 5000;
 
 
 
@@ -92,7 +90,7 @@ app.post("/", function(req, res) {
       });
     });
     
-    app.listen(port_number);
+    app.listen(port)
     
     ;
 console.log("listening on localhost:"+ port)
