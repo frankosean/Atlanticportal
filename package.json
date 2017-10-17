@@ -166,11 +166,7 @@
       "version": "1.8.1"
     },
     "express": "^4.16.2",
-    "express-handlebars": {
-      "integrity": "sha1-gKBwu4GbCeSvLKbQeA91zgXnXC8=",
-      "resolved": "https://registry.npmjs.org/express-handlebars/-/express-handlebars-3.0.0.tgz",
-      "version": "3.0.0"
-    },
+    "express-handlebars": "^3.0.0",
     "finalhandler": {
       "dependencies": {
         "debug": {
