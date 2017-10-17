@@ -4,7 +4,7 @@ var methodOverride = require("method-override");
 var path = require("path");
 
 var app = express();
-var port = process.env.port || 2000;
+var port = process.env.port || 3306;
 
 
 
@@ -32,10 +32,10 @@ app.set("view engine", "handlebars");
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  host: "localhost",
+  host: "us-cdbr-iron-east-05.cleardb.net",
   port: 3306,
-  user: "root",
-  password: "Apple321",
+  user: "b9fa8f55bc4889",
+  password: "2c1cee2b",
   database: "atlantic_db"
 });
 
@@ -90,7 +90,7 @@ app.post("/", function(req, res) {
       });
     });
     
-    app.listen(process.env.PORT || 2000)
+    app.listen(process.env.PORT || 3306)
     
     ;
 console.log("listening on localhost:"+ port)
