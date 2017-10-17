@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// tried to serve it up using static file path, but just used get request instead (not best practicie?)
+// tried to serve it up using static file path, but just used get request  instead (not best practicie?)
 app.get('/css/style.css', function(req, res){
   res.sendFile(__dirname + '/public/css/style.css');
 });

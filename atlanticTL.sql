@@ -1,7 +1,4 @@
-drop database if exists atlantic_db;
-CREATE DATABASE atlantic_db;
 
-USE atlantic_db;
 
 CREATE TABLE truckloads(
 	id int NOT NULL AUTO_INCREMENT,
