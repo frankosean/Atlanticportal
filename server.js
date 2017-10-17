@@ -4,7 +4,7 @@ var methodOverride = require("method-override");
 var path = require("path");
 
 var app = express();
-var port = 2000;
+var port = process.env.port || 2000;
 
 
 
