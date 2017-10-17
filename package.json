@@ -310,11 +310,7 @@
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
       "version": "2.0.0"
     },
-    "mysql": {
-      "integrity": "sha512-ZPXqQeYH7L1QPDyC77Rcp32cNCQnNjz8Y4BbF17tOjm5yhSfjFa3xS4PvuxWJtEEmwVc4ccI7sSntj4eyYRq0A==",
-      "resolved": "https://registry.npmjs.org/mysql/-/mysql-2.14.1.tgz",
-      "version": "2.14.1"
-    },
+    "mysql": "^2.15.0",
     "negotiator": {
       "integrity": "sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=",
       "resolved": "https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz",
