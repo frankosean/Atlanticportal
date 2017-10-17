@@ -4,7 +4,7 @@ var methodOverride = require("method-override");
 var path = require("path");
 
 var app = express();
-var port = process.env.port || 3306;
+var port = process.env.port || 5000;
 
 
 
@@ -33,7 +33,7 @@ var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-05.cleardb.net",
-  port: 2000,
+  port: 3306,
   user: "b9fa8f55bc4889",
   password: "2c1cee2b",
   database: "heroku_1e1a3ef17e3ba90"
@@ -90,7 +90,7 @@ app.post("/", function(req, res) {
       });
     });
     
-    app.listen(process.env.PORT || 3306)
+    app.listen(port)
     
     ;
 console.log("listening on localhost:"+ port)
