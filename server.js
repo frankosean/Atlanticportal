@@ -37,6 +37,7 @@ var connection = mysql.createConnection({
   user: "root",
   password: "Apple321",
   database: "atlantic_db"
+  socket:
 });
 
 connection.connect(function(err) {
@@ -90,5 +91,7 @@ app.post("/", function(req, res) {
       });
     });
     
-    app.listen(port);
+    app.listen(process.env.PORT || 2000)
+    
+    ;
 console.log("listening on localhost:"+ port)
