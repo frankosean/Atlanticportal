@@ -36,7 +36,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "b9fa8f55bc4889",
   password: "2c1cee2b",
-  database: "atlantic_db"
+  database: "heroku_1e1a3ef17e3ba90"
 });
 
 connection.connect(function(err) {
