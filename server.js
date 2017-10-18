@@ -32,6 +32,7 @@ app.set("view engine", "handlebars");
 
 
 
+
 var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-05.cleardb.net",
   port: 3306,
@@ -58,6 +59,13 @@ app.get("/", function(req, res){
     });
 });
 
+app.get('/addlane', function (req, res){
+  res.render("addlane");
+});
+
+app.get('/index', function (req, res){
+  res.render("index");
+});
 // POST BUTTON
 // ======================================================
 

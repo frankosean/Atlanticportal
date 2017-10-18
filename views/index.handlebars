@@ -81,25 +81,24 @@
             
             {{!  Modal Body }}
             <div class="modal-body">
-                <form class="form-horizontal" role="form">
+              
+              {{!  Here the #id and #status form begins }}
+                <form class="form-horizontal" id="idStatusForm" method="post" role="form">
                   <div class="form-group">
-                    
-                    <label  class="col-sm-2 control-label" for="inputEmail3">ID#</label>
+                    <label  class="col-sm-2 control-label" for="idNumber">ID#</label>
                     <div class="col-sm-10">
-                        
+                        {{! input for  #id }}
                         <input name="id" type="text" class="form-control" 
-                        id="inputEmail3" placeholder="ID"/>
-                    
+                        id="idNumber" placeholder="ID"/>
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-2 control-label"
-                          for="inputPassword3" >Status</label>
+                          for="inputPassword3" name="status">Status</label>
                     <div class="col-sm-10">
-
+                        {{! input for  #status}}
                         <input name="status" type="text" class="form-control"
                             id="status" placeholder="status"/>
-
                     </div>
                   </div>
                   <div class="form-group">
@@ -109,10 +108,11 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Update Load</button>
+                      <button type="submit" id= "updateLoad" class="btn btn-default">Update Load</button>
                     </div>
                   </div>
                 </form>
+                
             </div>
         </div>
     </div>
@@ -130,7 +130,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
+            <a class="nav-link" href="/addlane">Add Lane</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Team</a>

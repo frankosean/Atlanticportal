@@ -19,7 +19,24 @@ $(document).ready(function(){
 			k += 1;
 			
 		}
-	})
+	});
+
+
+]
+$('form#idStatusForm').submit(function(e){
+    e.preventDefault();
+
+    var form = $(this);
+    var jsonvideoFormData = utils.serializeToJSON(form);
+    var idStatusData = _.pick(jsonvideoFormData, 'idNumber', 'status');
+
+    api.post('/index', idStatusData, function(response){
+       alert('Video has been added!');
+    });
+});
+
+
+
 	$(".post").on("click", function(){
 		$(".loadBox").css({
 			"background-color": "red"

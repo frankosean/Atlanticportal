@@ -214,11 +214,6 @@
       "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.0.10.tgz",
       "version": "4.0.10"
     },
-    "http-errors": {
-      "integrity": "sha1-CgAsyFcHGSp+eUbO7cERVfYOxzY=",
-      "resolved": "https://registry.npmjs.org/http-errors/-/http-errors-1.6.2.tgz",
-      "version": "1.6.2"
-    },
     "iconv-lite": {
       "integrity": "sha512-oTZqweIP51xaGPI4uPa56/Pri/480R+mo7SeU+YETByQNhDG55ycFyNLIgta9vXhILrxXDmF7ZGhqZIcuN0gJQ==",
       "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.19.tgz",
