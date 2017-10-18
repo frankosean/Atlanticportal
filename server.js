@@ -32,7 +32,6 @@ app.set("view engine", "handlebars");
 
 
 
-
 var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-05.cleardb.net",
   port: 3306,

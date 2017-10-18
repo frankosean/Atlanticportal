@@ -22,7 +22,7 @@ $(document).ready(function(){
 	});
 
 
-]
+// ignore this stuff ////////////////////////////////////////////////////
 $('form#idStatusForm').submit(function(e){
     e.preventDefault();
 
@@ -31,10 +31,10 @@ $('form#idStatusForm').submit(function(e){
     var idStatusData = _.pick(jsonvideoFormData, 'idNumber', 'status');
 
     api.post('/index', idStatusData, function(response){
-       alert('Video has been added!');
+       alert('Status and ID are updated');
     });
 });
-
+////////////////////////////////////////////////////////////////////////
 
 
 	$(".post").on("click", function(){
