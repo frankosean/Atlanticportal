@@ -2,9 +2,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var path = require("path");
+var mysql = require("mysql");
 
 var app = express();
-var port = process.env.port || 5000;
+var PORT = process.env.PORT || 2000;
 
 
 
@@ -29,7 +30,7 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var mysql = require("mysql");
+
 
 var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-05.cleardb.net",
@@ -90,7 +91,5 @@ app.post("/", function(req, res) {
       });
     });
     
-    app.listen(port)
-    
-    ;
-console.log("listening on localhost:"+ port)
+    app.listen(PORT);
+console.log("listening on localhost:"+ PORT);
