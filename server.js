@@ -25,7 +25,7 @@ app.use(express.static("public"));
 
 // Routes
 require("./routes/html-routes.js")(app);
-// require("./routes/add-lane-api-routes.js")(app);
+require("./routes/add-lane-api.js")(app);
 
 //CSS 
 app.get("/css/style.css", function(req, res){
