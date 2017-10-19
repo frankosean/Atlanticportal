@@ -1,102 +1,40 @@
+// DEPENDENCIES 
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var path = require("path");
-var mysql = require("mysql");
 
+// EXPRESS 
 var app = express();
 var PORT = process.env.PORT || 2000;
 
-
+// Requiring our models for syncing
+var db = require("./models");
 
 // Parse application/x-www-form-urlencoded
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// tried to serve it up using static file path, but just used get request  instead (not best practicie?)
-app.get('/css/style.css', function(req, res){
-  res.sendFile(__dirname + '/public/css/style.css');
-});
-
-
-
-app.use(methodOverride("_method"));
-
+// HANDLEBARS 
 var exphbs = require("express-handlebars");
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Static directory
+app.use(express.static("public"));
 
+// Routes
+require("./routes/html-routes.js")(app);
+// require("./routes/add-lane-api-routes.js")(app);
 
-var connection = mysql.createConnection({
-  host: "us-cdbr-iron-east-05.cleardb.net",
-  port: 3306,
-  user: "b9fa8f55bc4889",
-  password: "2c1cee2b",
-  database: "heroku_1e1a3ef17e3ba90"
-});
+//CSS 
+app.get("/css/style.css", function(req, res){
+    res.sendFile(__dirname + "/public/css/style.css");
+})
 
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-
-  console.log("connected as id " + connection.threadId);
-});
-
-// ======================================================
-
-app.get("/", function(req, res){
-    connection.query("SELECT * FROM truckloads", function(err, data){
-        if (err) throw err;
-        res.render("index", { truckloads: data });
-    });
-});
-
-app.get('/addlane', function (req, res){
-  res.render("addlane");
-});
-
-app.get('/index', function (req, res){
-  res.render("index");
-});
-// POST BUTTON
-// ======================================================
-
-var k = 0
-
-app.post("/", function(req, res) {
-    connection.query("INSERT INTO truckloads (lane, pickupdate, pickupnumber, ponumber, additional_info) VALUES (?, ?, ?, ?, ?)", 
-    [req.body.truckloads, req.body.pickupdate, req.body.pickupnumber, req.body.ponumber, req.body.additional_info], function(err, result) {
-      if (err) {
-        throw err;
-      }
-      res.redirect("/");
-    });
+//  SEQUELIZE SYNC 
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
   });
-
-  app.delete("/:id", function(req, res) {
-    connection.query("DELETE FROM truckloads WHERE id = ?", [req.params.id], function(err, result) {
-      if (err) {
-        throw err;
-      }
-      res.redirect("/");
-    });
-  });
-
-  app.put("/", function(req, res) {
-      connection.query("UPDATE truckloads SET status = ? WHERE id = ?", [req.body.status, req.body.id], function(err, result) {
-        if (err) {
-          throw err;
-        }
-        res.redirect("/");
-      });
-    });
-    
-    app.listen(PORT);
-console.log("listening on localhost:"+ PORT);
+});
