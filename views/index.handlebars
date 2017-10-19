@@ -15,13 +15,13 @@
                 </h4>
             </div>
             
-            {{!  Modal Body }}
+            {{!  Modal Body Add Lane}}
             <div class="modal-body">
                 <form role="form">
                   <div class="form-group">
                     
-                    <label for="exampleInputEmail1">Lane </label>
-                      <input name="truckloads" type="text" class="form-control"
+                    <label for="exampleInputEmail1">LANE </label>
+                      <input name="lane" type="text" class="form-control"
                       id="exampleInputEmail1" placeholder="City, ST"/>
                   
                   </div>
@@ -41,20 +41,20 @@
                   <div class="form-group">
                     
                     <label for="exampleInputPassword1">PO #</label>
-                      <input name="pickupnumber" type="text" class="form-control"
+                      <input name="poNumber" type="text" class="form-control"
                           id="poNumber" placeholder="PO #"/>
                   </div>
                   <div class="form-group">
                     
-                    <label for="exampleInputPassword1">Addition Info</label>
-                      <input name="" type="text" class="form-control"
+                    <label for="exampleInputPassword1">Additional Info</label>
+                      <input name="additional_info" type="text" class="form-control"
                           id="additional_info" placeholder="(ex. drop off info)"/>
                   </div>
                 </form>
             </div>   
             {{!  Modal Footer }}
             <div class="modal-footer">
-                <button id="sub" type="button" class="btn btn-primary">
+                <button id="sub" type="submit" class="btn btn-primary">
                     Submit
                 </button>
             </div>

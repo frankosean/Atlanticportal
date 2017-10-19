@@ -9,6 +9,9 @@ $(document).ready(function(){
     $(document).on("submit", "#sub", handleTruckloadFormSubmit);
     $(document).on("submit", "#delete", handleDeleteButtonPress);
 
+    var url = window.location.search;
+    var truckloadId;
+
     getTruckloads();
 
     function handleTruckloadFormSubmit(event){

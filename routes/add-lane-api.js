@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app){
-    app.get('/api/truckloads', function(req, res){
+    app.get("/api/truckloads", function(req, res){
         db.truckloads.findAll({
             include: [db.truckloads]
         }).then(function(truckloads){
