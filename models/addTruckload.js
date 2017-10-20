@@ -1,3 +1,6 @@
+var sequelize = require("sequelize");
+
+
 module.exports = function(sequelize, DataTypes) {
     var truckloads = sequelize.define("Truckloads", {
         lane: {

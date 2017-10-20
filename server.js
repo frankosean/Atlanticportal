@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 
 // EXPRESS 
 var app = express();
-var PORT = process.env.PORT || 2000;
+var PORT = process.env.PORT || 2020;
 
 // Requiring our models for syncing
 var db = require("./models");

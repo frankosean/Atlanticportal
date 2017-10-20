@@ -1,14 +1,16 @@
 var db = require("../models");
+var express = require("express");
+var app = express();
 
 //Routes 
 module.exports = function(app){
 
-    app.get("/api/truckloads/", function(req, res){ 
-        db.truckloads.findAll({ })
-        .then(function(truckloads){
-            res.json(truckloads);
+    app.get("/api/truckloads/", function(req, res) {
+        db.truckloads.findAll({})
+        .then(function(truckloads) {
+          res.json(truckloads);
         });
-    });
+      });
 
     // app.post("/api/truckloads", function(req, res){
     //     console.log(req.body);

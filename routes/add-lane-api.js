@@ -1,4 +1,5 @@
 var db = require("../models");
+var methodOverride = require("method-override");
 
 module.exports = function(app){
 
