@@ -4,7 +4,17 @@ module.exports = function(app){
 
     app.post("/api/truckloads", function(req, res){
         db.truckloads.create(req.body).then(function(truckloads){
-            res.json(truckloads);
+            console.log(req.body);
+            db.truckloads.create({
+                lane: req.body.lane,
+                pickUpDate: req.body.pickUpDate,
+                pickUpNumber:req.body.pickUpNumber,
+                poNumber: req.body.poNumber,
+                additionalInfo: req.body.additionalInfo
+            })
+            .then(function(req, res){
+                res.json(truckloads);
+            });
         });
     });
 
