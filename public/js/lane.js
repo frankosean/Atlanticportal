@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var loadbox = $("#loadbox");
-    var lane = $("#exampleInputEmail1");
+    var lane = $("#lane");
     var pickupdate = $("#exampleInputPassword1");
     var pickupnumber  = $("#pickupnumber");
     var poNumber = $("#poNumber");
@@ -80,4 +80,4 @@ $(document).ready(function(){
         })
         .done(getTruckloads);
     }
-});
+})

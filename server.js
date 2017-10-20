@@ -25,12 +25,14 @@ app.use(express.static("public"));
 
 // Routes
 require("./routes/html-routes.js")(app);
+require("./routes/api-routes")(app);
 require("./routes/add-lane-api.js")(app);
 
 //CSS 
 app.get("/css/style.css", function(req, res){
     res.sendFile(__dirname + "/public/css/style.css");
 })
+
 
 //  SEQUELIZE SYNC 
 db.sequelize.sync({ force: true }).then(function() {

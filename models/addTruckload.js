@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var truckload = sequelize.define("Truckloads", {
+    var truckloads = sequelize.define("Truckloads", {
         lane: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -33,5 +33,5 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: true,
         }
     });
-    return truckload;
+    return truckloads;
 }
