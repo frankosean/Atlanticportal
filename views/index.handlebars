@@ -172,7 +172,7 @@
             
             <div class="col-sm-6">
 {{! Button trigger Update Truckload modal }}
-<button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
+{{!-- <button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
     Update Truckload
 </button>
 </div>
@@ -180,7 +180,7 @@
 {{! Button trigger New Lane modal  }}
 <button id="buttonEnterLane" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
     Enter Lane
-</button>
+</button> --}}
 
 </div>
 </section>
@@ -206,11 +206,10 @@
                 <tr>
                   <td>{{this.id}}</td>
                   <td>{{this.lane}}</td>
-                  <td>{{this.pickupdate}}</td>
-                  <td>{{this.pickupnumber}}</td>
-                  <td>{{this.ponumber}}</td>
-                  <td>{{this.status}}</td>
-                  <td>{{this.additional_info}}</td>
+                  <td>{{this.pickUpDate}}</td>
+                  <td>{{this.pickUpNumber}}</td>
+                  <td>{{this.poNumber}}</td>
+                  <td>{{this.additonalInfo}}</td>
                   <td><button class="btn btn-success" type="submit">Delete</button></td>
                 </tr>
                 {{/each}}

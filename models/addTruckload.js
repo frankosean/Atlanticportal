@@ -2,7 +2,7 @@ var sequelize = require("sequelize");
 
 
 module.exports = function(sequelize, DataTypes) {
-    var truckloads = sequelize.define("Truckloads", {
+    var truckloads = sequelize.define("truckloads", {
         lane: {
             type: DataTypes.STRING,
             allowNull: false,

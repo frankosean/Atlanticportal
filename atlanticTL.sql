@@ -1,5 +1,3 @@
-
-
 CREATE TABLE truckloads(
 	id int NOT NULL AUTO_INCREMENT,
     lane VARCHAR(1000) NOT NULL,
