@@ -18,10 +18,4 @@ module.exports = function(app){
     app.get("/addlane", function(req, res){
         res.render("addlane");
     });
-
-    //Route for Api
-    app.get("/api/truckloads", function(req, res){
-        res.render("index");
-    }) 
-
 }

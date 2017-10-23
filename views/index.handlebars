@@ -202,6 +202,7 @@
                 </tr>
               </thead>
               <tbody>
+              <container class="box">
                {{#each truckloads}}
                 <tr>
                   <td>{{this.id}}</td>
@@ -209,13 +210,15 @@
                   <td>{{this.pickUpDate}}</td>
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
-                  <td>{{this.additonalInfo}}</td>
-                  <form action="/{{this.id}}?_method=DELETE" method="POST">
-          				  <button type="submit">Delete</button>
+                  <td>{{this.additionalInfo}}</td>
+                  <form>
+                  <span>
+          				  <button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button>
+                  </span>
                   </form>
                 </tr>
                 {{/each}}
-
+              </container>
               </tbody>
             </table>
           </div>

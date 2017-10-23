@@ -1,6 +1,7 @@
 // DEPENDENCIES 
 var express = require("express");
 var bodyParser = require("body-parser");
+var methodOverride = require("method-override");
 
 // EXPRESS 
 var app = express();
@@ -28,10 +29,15 @@ app.use(express.static("public"));
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes")(app);
 require("./routes/add-lane-api.js")(app);
+// require("./routes/delete-lane-api.js")(app);
 
 //CSS 
 app.get("/css/style.css", function(req, res){
     res.sendFile(__dirname + "/public/css/style.css");
+})
+
+app.get("/js/delete.js", function(req, res){
+  res.sendFile(__dirname + "/public/js/delete.js");
 })
 
 
