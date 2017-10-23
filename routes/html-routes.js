@@ -5,9 +5,9 @@ var path = require('path');
 module.exports = function(app){
 
     //Route for Main Page
-    app.get("/", function(req, res){
-        res.render("index");
-    });
+    // app.get("/", function(req, res){
+    //     res.render("index");
+    // });
 
     //Route back to Main Page
     app.get("/index", function(req,res){
@@ -19,9 +19,9 @@ module.exports = function(app){
         res.render("addlane");
     });
 
-    // //Route for Api
-    // app.get("/api/truckloads", function(req, res){
-    //     res.sendFile(path.join(__dirname, "api-routes.js"));
-    // }) 
+    //Route for Api
+    app.get("/api/truckloads", function(req, res){
+        res.render("index");
+    }) 
 
 }

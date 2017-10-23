@@ -127,7 +127,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/addlane">Add Lane</a>
@@ -210,7 +210,9 @@
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additonalInfo}}</td>
-                  <td><button class="btn btn-success" type="submit">Delete</button></td>
+                  <form action="/{{this.id}}?_method=DELETE" method="POST">
+          				  <button type="submit">Delete</button>
+                  </form>
                 </tr>
                 {{/each}}
 
