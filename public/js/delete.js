@@ -1,3 +1,5 @@
+var truckloads = "heroku_1e1a3ef17e3ba90"
+
 $(document).ready(function() {
 
     $("#delete").on("click", function(){
