@@ -10,7 +10,7 @@
   "test": {
     "username": "b9fa8f55bc4889",
     "password": "2c1cee2b",
-    "port": "8889",
+    "port": "3306",
     "database": "heroku_1e1a3ef17e3ba90",
     "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"

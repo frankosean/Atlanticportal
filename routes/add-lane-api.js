@@ -1,33 +1,32 @@
 var db = require("../models");
 var methodOverride = require("method-override");
-//var heroku_1e1a3ef17e3ba90 = "heroku_1e1a3ef17e3ba90";
 
 module.exports = function(app){
 
-    app.post("/api/heroku_1e1a3ef17e3ba90", function(req, res){
-        db.heroku_1e1a3ef17e3ba90.create(req.body).then(function(heroku_1e1a3ef17e3ba90){
+    app.post("/api/truckloads", function(req, res){
+        db.truckloads.create(req.body).then(function(truckloads){
             })
-            .then(function(heroku_1e1a3ef17e3ba90Json){
+            .then(function(truckLoadsJson){
                 res.redirect("/")
             });
         });
 
     app.put("/:id", function(req, res){
-        db.heroku_1e1a3ef17e3ba90.update({
+        db.truckloads.update({
             where: {
                 id: req.params.id
             }
-        }).then(function(heroku_1e1a3ef17e3ba90Json){
+        }).then(function(truckLoadsJson){
             res.redirect("/");
         });
     })
 
     app.post("/:id", function(req, res){
-        db.heroku_1e1a3ef17e3ba90.destroy({
+        db.truckloads.destroy({
             where: {
                 id: req.params.id
             }
-        }).then(function(heroku_1e1a3ef17e3ba90Json){
+        }).then(function(truckLoadsJson){
             res.redirect("/");
         });
     });

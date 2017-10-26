@@ -1,5 +1,3 @@
-//var truckloads = "heroku_1e1a3ef17e3ba90"
-
 $(document).ready(function() {
 
     $("#delete").on("click", function(){
@@ -10,7 +8,7 @@ $(document).ready(function() {
               method: "DELETE",
               url: "/api/truckloads/" + id
             })
-            .done(heroku_1e1a3ef17e3ba90Json);
+            .done(truckLoadsJson);
           }
     });
 })
