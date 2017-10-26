@@ -16,11 +16,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "b9fa8f55bc4889",
     "port": "3306",
-    "password": "Apple321",
+    "password": "2c1cee2b",
     "database": "truckloads",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"
   }
 }
