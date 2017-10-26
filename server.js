@@ -5,7 +5,7 @@ var methodOverride = require("method-override");
 
 // EXPRESS 
 var app = express();
-var PORT = process.env.PORT || 2020;
+var PORT = process.env.PORT || 3306;
 
 // Requiring our models for syncing
 var db = require("./models");
