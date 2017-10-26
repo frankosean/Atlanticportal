@@ -1,70 +1,57 @@
 {{!  Modal for entering lane (on the right)}}
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             {{! Modal Header}}
             <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
+                <button type="button" class="close" data-dismiss="modal">
                        <span aria-hidden="true">&times;</span>
                        <span class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Enter Lane
-                </h4>
+                <h4 class="modal-title" id="myModalLabel">Enter Lane</h4>
             </div>
             
             {{!  Modal Body Add Lane}}
             <div class="modal-body">
                 <form role="form">
+
                   <div class="form-group">
-                    
                     <label for="exampleInputEmail1">LANE </label>
-                      <input name="lane" type="text" class="form-control"
-                      id="exampleInputEmail1" placeholder="City, ST"/>
-                  
+                      <input name="lane" type="text" class="form-control" id="exampleInputEmail1" placeholder="City, ST"/>
                   </div>
+
                   <div class="form-group">
-                    
                     <label for="exampleInputPassword1">PICKUP DATE</label>
-                      <input name="pickupdate" type="text" class="form-control"
-                          id="exampleInputPassword1" placeholder="(MM/DD)"/>
-                  
+                    <input name="pickupdate" type="text" class="form-control" id="exampleInputPassword1" placeholder="(MM/DD)"/>
                   </div>
+
                   <div class="form-group">
-                    
                     <label for="exampleInputPassword1">PICKUP NUMBER</label>
-                      <input name="pickupnumber" type="text" class="form-control"
-                          id="pickUpNumber" placeholder="PICKUP #"/>
+                    <input name="pickupnumber" type="text" class="form-control" id="pickUpNumber" placeholder="PICKUP #"/>
                   </div>
+
                   <div class="form-group">
-                    
                     <label for="exampleInputPassword1">PO #</label>
-                      <input name="poNumber" type="text" class="form-control"
-                          id="poNumber" placeholder="PO #"/>
+                    <input name="poNumber" type="text" class="form-control" id="poNumber" placeholder="PO #"/>
                   </div>
+
                   <div class="form-group">
-                    
                     <label for="exampleInputPassword1">Additional Info</label>
-                      <input name="additional_info" type="text" class="form-control"
-                          id="additional_info" placeholder="(ex. drop off info)"/>
+                    <input name="additional_info" type="text" class="form-control" id="additional_info" placeholder="(ex. drop off info)"/>
                   </div>
+
                 </form>
             </div>   
             {{!  Modal Footer }}
             <div class="modal-footer">
-                <button id="sub" type="submit" class="btn btn-primary">
-                    Submit
-                </button>
+                <button id="sub" type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
 </div>
 
 {{!  Modal for updating Truckload (on the left) }}
-<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             
@@ -75,8 +62,7 @@
                        <span aria-hidden="true">&times;</span>
                        <span class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Update Truckload</h4>
+                <h4 class="modal-title" id="myModalLabel">Update Truckload</h4>
             </div>
             
             {{!  Modal Body }}
@@ -88,23 +74,18 @@
                     <label  class="col-sm-2 control-label" for="idNumber">ID#</label>
                     <div class="col-sm-10">
                         {{! input for  #id }}
-                        <input name="id" type="text" class="form-control" 
-                        id="idNumber" placeholder="ID"/>
+                        <input name="id" type="text" class="form-control" id="idNumber" placeholder="ID"/>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="inputPassword3" name="status">Status</label>
+                    <label class="col-sm-2 control-label" for="inputPassword3" name="status">Status</label>
                     <div class="col-sm-10">
                         {{! input for  #status}}
-                        <input name="status" type="text" class="form-control"
-                            id="status" placeholder="status"/>
+                        <input name="status" type="text" class="form-control" id="status" placeholder="status"/>
                     </div>
                   </div>
                   <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      
-                    </div>
+                    <div class="col-sm-offset-2 col-sm-10"></div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
@@ -112,14 +93,13 @@
                     </div>
                   </div>
                 </form>
-                
             </div>
         </div>
     </div>
 </div>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="">Atlantic Packaging</a>
+      <a class="navbar-brand" src="/public/img/Atlantic-logo.png">Atlantic Packaging</a>
       <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -193,10 +173,13 @@
               <thead>
                 <tr>
                   <th>ID#</th>
+                  <th>Created At</th>
                   <th>Lane</th>
                   <th>PickUp Date</th>
-                  <th>PickUp #</th>
                   <th>Status</th>
+                  <th>Update Load Status</th>
+                  <th>PickUp Number</th>
+                  <th>PO Number</th>
                   <th>Additional Info</th>
                   <th>Complete</th>
                 </tr>
@@ -206,14 +189,24 @@
                {{#each truckloads}}
                 <tr>
                   <td>{{this.id}}</td>
+                  <td>{{this.createdAt}}</td>
                   <td>{{this.lane}}</td>
                   <td>{{this.pickUpDate}}</td>
+                  <td>{{this.status}}</td>
+                  <td>
+                    <form action="/{{this.id}}" method="PUT">                 
+                    <span>
+                    <input name="status" type="text" class="form-control" id="update" placeholder="Status">
+                    <button id="update" class="btn btn-primary btn-sm" type="submit">Update</button>
+                    </span>
+                    </form> 
+                  </td>
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additionalInfo}}</td>
-                  <form>
+                  <form action="/{{this.id}}" method="POST">
                   <span>
-          				  <button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button>
+          				  <td><button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button></td>
                   </span>
                   </form>
                 </tr>
