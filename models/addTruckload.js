@@ -14,6 +14,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        status: {
+            type:DataTypes.STRING,
+            allowNull: false,
+        },
         pickUpNumber: {
             type: DataTypes.STRING,
             allowNull: false,

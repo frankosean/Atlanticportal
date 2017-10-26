@@ -29,7 +29,6 @@ app.use(express.static("public"));
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes")(app);
 require("./routes/add-lane-api.js")(app);
-// require("./routes/delete-lane-api.js")(app);
 
 //CSS 
 app.get("/css/style.css", function(req, res){

@@ -11,7 +11,7 @@
             <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/addlane">Add Lane</a>
+            <a class="nav-link" href="/addlane">Add Load</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Team</a>
@@ -44,63 +44,66 @@
         </nav>
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-          <h1>Update Loads</h1>
+          <h1>Add Load</h1>
 
 <section class="row text-center placeholders">
             
-            <div class="col-sm-6">
+            {{!-- <div class="col-sm-6">
               <form action="/api/truckloads" method="PUT">
-              <div class="form-group">
-                <label for="formGroupExampleInput">ID #</label>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">ID #</label>
                   <input type="text" class="form-control" id="idNumber" name="id" placeholder="ID #">
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Status</label>
+                </div>
+
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Status</label>
                   <input type="text" class="form-control" id="status" name="status" placeholder="Status">
-              </div>
-              {{! Button trigger Update Truckload modal }}
-                  <button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
+                </div>
+
+                {{! Button trigger Update Truckload modal }}
+                <button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
                   Update Truckload
-                  </button>
+                </button>
               </form>
               </div>
+               --}}
 <div class="col-sm-6">
           <form action="/api/truckloads" method="POST">
                   <div class="form-group">
-                    
                     <label for="exampleInputEmail1">Lane </label>
-                      <input name="lane" type="text" class="form-control"
-                      id="lane" placeholder="City, ST"/>
+                    <input name="lane" type="text" class="form-control" id="lane" placeholder="City, ST"/>
                   </div>
+
                   <div class="form-group">                    
-                    <label >PICKUP DATE</label>
-                      <input name="pickUpDate" type="text" class="form-control"
-                          id="exampleInputPassword1" placeholder="(MM/DD)"/>                  
+                    <label>PICKUP DATE</label>
+                    <input name="pickUpDate" type="text" class="form-control" id="exampleInputPassword1" placeholder="(MM/DD)"/>                  
                   </div>
+                  
                   <div class="form-group">  
-                    <label >PICKUP NUMBER</label>
-                      <input name="pickUpNumber" type="text" class="form-control"
-                          id="pickUpNumber" placeholder="PICKUP #"/>
+                    <label>STATUS</label>
+                    <input name="status" type="text" class="form-control" id="status" placeholder="Status"/>
                   </div>
-                  <div class="form-group">
-                    <label >PO #</label>
-                      <input name="poNumber" type="text" class="form-control"
-                          id="poNumber" placeholder="PO #"/>
-                  </div>
-                  <div class="form-group">
 
+                  <div class="form-group">  
+                    <label>PICKUP NUMBER</label>
+                    <input name="pickUpNumber" type="text" class="form-control" id="pickUpNumber" placeholder="PICKUP #"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label>PO #</label>
+                    <input name="poNumber" type="text" class="form-control" id="poNumber" placeholder="PO #"/>
+                  </div>
+
+                  <div class="form-group">
                     <label >Additional Info</label>
-                      <input name="additionalInfo" type="text" class="form-control"
-                          id="additionalInfo" placeholder="(ex. drop off info)"/>
+                    <input name="additionalInfo" type="text" class="form-control" id="additionalInfo" placeholder="(ex. drop off info)"/>
                   </div>
+
               {{! Button trigger New Lane modal  }}
-                <button id="buttonEnterLane" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
-                Enter Lane
-                </button>
+                  <button id="buttonEnterLane" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+                    Enter Lane
+                  </button>
               </form>
-
-
-
 </div>
 </section>
  

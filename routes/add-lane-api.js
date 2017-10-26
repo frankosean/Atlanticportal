@@ -11,13 +11,23 @@ module.exports = function(app){
             });
         });
 
-    // app.delete("/api/truckloads/:id", function(req, res){
-    //     db.truckloads.destroy({
-    //         where: {
-    //             id: req.params.id
-    //         }
-    //     }).then(function(truckloads){
-    //         res.json(truckloads);
-    //     });
-    // });
+    app.put("/:id", function(req, res){
+        db.truckloads.update({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(truckLoadsJson){
+            res.redirect("/");
+        });
+    })
+
+    app.post("/:id", function(req, res){
+        db.truckloads.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(truckLoadsJson){
+            res.redirect("/");
+        });
+    });
 };
