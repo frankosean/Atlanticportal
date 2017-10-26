@@ -1,18 +1,18 @@
 {
   "development": {
-    "username": "root",
-    "password": "Apple321",
+    "username": "b9fa8f55bc4889",
+    "password": "2c1cee2b",
     "port": "3306",
     "database": "truckloads",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "Apple321",
+    "username": "b9fa8f55bc4889",
+    "password": "2c1cee2b",
     "port": "8889",
     "database": "truckloads",
-    "host": "127.0.0.1",
+    "host": "us-cdbr-iron-east-05.cleardb.net",
     "dialect": "mysql"
   },
   "production": {
