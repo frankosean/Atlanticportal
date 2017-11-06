@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         status: {
             type:DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         pickUpNumber: {
             type: DataTypes.STRING,
@@ -29,7 +29,12 @@ module.exports = function(sequelize, DataTypes) {
         additionalInfo: {
         type: DataTypes.STRING,
         allowNull: true,
-        }
+        },
+        updatedAt: DataTypes.DATE,
+        createdAt: DataTypes.DATEONLY,
+    },
+    {
+        paranoid: true,
     });
     return truckloads;
 }

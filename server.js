@@ -35,8 +35,8 @@ app.get("/css/style.css", function(req, res){
     res.sendFile(__dirname + "/public/css/style.css");
 })
 
-app.get("/js/delete.js", function(req, res){
-  res.sendFile(__dirname + "/public/js/delete.js");
+app.get("/img/Atlantic-logo.png", function(req, res){
+  res.sendFile(__dirname + "/public/img/Atlantic-logo.png");
 })
 
 

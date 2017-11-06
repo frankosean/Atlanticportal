@@ -1,13 +1,15 @@
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">C
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
           </li>
+          {{!-- <li class="nav-item">
+            <a class="nav-link" href="/addlane">Add Lane</a>
+          </li> --}}
           <li class="nav-item">
-            <a class="nav-link" href="/team">Team</a>
+            <a class="nav-link" href="#">Team</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -21,20 +23,14 @@
       <div class="row">
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
           <ul class="nav nav-pills flex-column">
-            {{!-- <li class="nav-item">
-              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
-            </li> --}}
             <li class="nav-item">
               <a class="nav-link" href="/completed">Completed Loads</a>
-            </li> 
+            </li>
           </ul>
-
-        
-
         </nav>
 
         <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
-          <h1>Load Board</h1>
+          <h1>Completed Loads</h1>
 
 <section class="row text-center placeholders">
             
@@ -43,16 +39,16 @@
 {{!-- <button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
     Update Truckload
 </button>
-</div> --}}
-<div class="col-sm-2">
+</div>
+<div class="col-sm-6">
 {{! Button trigger New Lane modal  }}
-<button id="addLaneButton" class="btn btn-primary btn-lg">
-  <a class="nav-link" id="addLaneButton" href="/addlane">Add Lane</a>
-</button>
+<button id="buttonEnterLane" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Enter Lane
+</button> --}}
 
 </div>
 </section>
-          <h2>Open Loads</h2>
+          <h2>Completed Loads</h2>
 
 {{! Table of loads }}
 
@@ -61,16 +57,13 @@
               <thead>
                 <tr>
                   <th>ID#</th>
-                  <th>Created At</th>
+                  {{!-- <th>Created At</th> --}}
                   <th>Lane</th>
-                  <th>PickUp Date</th>
+                  {{!-- <th>PickUp Date</th> --}}
                   {{!-- <th>Status</th> --}}
-                  {{!-- <th>Update Load Status</th> --}}
                   <th>PickUp Number</th>
                   <th>PO Number</th>
                   <th>Additional Info</th>
-                  {{!-- <th>Complete</th> --}}
-                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -78,43 +71,20 @@
                {{#each truckloads}}
                 <tr>
                   <td>{{this.id}}</td>
-                  <td>{{this.createdAt}}</td>
+                  {{!-- <td>{{this.createdAt}}</td> --}}
                   <td>{{this.lane}}</td>
-                  <td>{{this.pickUpDate}}</td>
+                  {{!-- <td>{{this.pickUpDate}}</td> --}}
                   {{!-- <td>{{this.status}}</td> --}}
-                  {{!-- Update --}}
-                  {{!-- <td>
-                    <form action="/update/:{{this.id}}" method="POST">                 
-                    <span>
-                    <input name="statusInput" type="text" class="form-control" id="statusInput" placeholder="Status">
-                    <button id="statusInput" class="btn btn-primary btn-sm" type="submit">Update</button>
-                    </span>
-                    </form> 
-                  </td> --}}
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additionalInfo}}</td>
-                  {{!-- Complete --}}
-                  {{!-- <form action="/completed/:{{this.id}}" method="POST">
-                  <span>
-          				  <td><button id="completed" class="btn btn-primary btn-lg" type="submit">Complete</button></td>
-                  </span>
-                  </form> --}}
-                  {{!-- Delete --}}
-                  <form action="/{{this.id}}" method="POST">
-                  <span>
-          				  <td><button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button></td>
-                  </span>
-                  </form>
                 </tr>
                 {{/each}}
               </container>
               </tbody>
             </table>
           </div>
-          <div class="col-lg-12">
-             <img id="pic" src="http://mustmethod.com/wp-content/uploads/2017/01/Atlantic-logo.png" alt="atlanticpkg" srcset="">
-          </div>
+           <img id="pic" src="http://mustmethod.com/wp-content/uploads/2017/01/Atlantic-logo.png" alt="atlanticpkg" srcset="">
         </main>
       </div>
 	</div>    

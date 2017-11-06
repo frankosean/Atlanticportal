@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "Apple321",
-    "port": "3306",
+    "password": "root",
+    "port": "8889",
     "database": "truckloads",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Apple321",
+    "password": "root",
     "port": "8889",
     "database": "truckloads",
     "host": "127.0.0.1",
@@ -17,8 +17,8 @@
   },
   "production": {
     "username": "root",
-    "port": "3306",
-    "password": "Apple321",
+    "port": "8889",
+    "password": "root",
     "database": "truckloads",
     "host": "127.0.0.1",
     "dialect": "mysql"
