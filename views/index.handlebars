@@ -72,8 +72,8 @@
                   <th>Created At</th>
                   <th>Lane</th>
                   <th>PickUp Date</th>
-                  {{!-- <th>Status</th> --}}
-                  {{!-- <th>Update Load Status</th> --}}
+                  <th>Status</th>
+                  <th>Update Load Status</th>
                   <th>PickUp Number</th>
                   <th>PO Number</th>
                   <th>Additional Info</th>
@@ -89,16 +89,16 @@
                   <td>{{this.createdAt}}</td>
                   <td>{{this.lane}}</td>
                   <td>{{this.pickUpDate}}</td>
-                  {{!-- <td>{{this.status}}</td> --}}
+                  <td>{{this.status}}</td>
                   {{!-- Update --}}
-                  {{!-- <td>
-                    <form action="/update/:{{this.id}}" method="POST">                 
+                  <td>
+                    <form action="/update/{{this.id}}" method="POST">                 
                     <span>
                     <input name="statusInput" type="text" class="form-control" id="statusInput" placeholder="Status">
                     <button id="statusInput" class="btn btn-primary btn-sm" type="submit">Update</button>
                     </span>
                     </form> 
-                  </td> --}}
+                  </td>
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additionalInfo}}</td>

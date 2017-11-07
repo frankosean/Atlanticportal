@@ -33,8 +33,8 @@ module.exports = function(sequelize, DataTypes) {
         updatedAt: DataTypes.DATE,
         createdAt: DataTypes.DATEONLY,
     },
-    {
-        paranoid: true,
+    {    
+        paranoid: false,
     });
     return truckloads;
 }
