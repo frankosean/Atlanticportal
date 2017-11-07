@@ -14,7 +14,10 @@ body {
     font-size: 10px;
   }
 
-
+#logo {
+  height: 50px;
+  width:50px ;
+}
 .navbar-brand {
   height: 50px;
   width:50px ;
