@@ -1,0 +1,90 @@
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">C
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+          </li>
+          {{!-- <li class="nav-item">
+            <a class="nav-link" href="/addlane">Add Lane</a>
+          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="#">Team</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/completed">Completed Loads</a>
+            </li>
+          </ul>
+        </nav>
+
+        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+          <h1>Completed Loads</h1>
+
+<section class="row text-center placeholders">
+            
+            <div class="col-sm-6">
+{{! Button trigger Update Truckload modal }}
+{{!-- <button id="buttonUpdateTruck" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalHorizontal">
+    Update Truckload
+</button>
+</div>
+<div class="col-sm-6">
+{{! Button trigger New Lane modal  }}
+<button id="buttonEnterLane" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Enter Lane
+</button> --}}
+
+</div>
+</section>
+          <h2>Completed Loads</h2>
+
+{{! Table of loads }}
+
+          <div id="loadbox" class="table-responsive" >
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID#</th>
+                  {{!-- <th>Created At</th> --}}
+                  <th>Lane</th>
+                  {{!-- <th>PickUp Date</th> --}}
+                  {{!-- <th>Status</th> --}}
+                  <th>PickUp Number</th>
+                  <th>PO Number</th>
+                  <th>Additional Info</th>
+                </tr>
+              </thead>
+              <tbody>
+              <container class="box">
+               {{#each truckloads}}
+                <tr>
+                  <td>{{this.id}}</td>
+                  {{!-- <td>{{this.createdAt}}</td> --}}
+                  <td>{{this.lane}}</td>
+                  {{!-- <td>{{this.pickUpDate}}</td> --}}
+                  {{!-- <td>{{this.status}}</td> --}}
+                  <td>{{this.pickUpNumber}}</td>
+                  <td>{{this.poNumber}}</td>
+                  <td>{{this.additionalInfo}}</td>
+                </tr>
+                {{/each}}
+              </container>
+              </tbody>
+            </table>
+          </div>
+           <img id="pic" src="http://mustmethod.com/wp-content/uploads/2017/01/Atlantic-logo.png" alt="atlanticpkg" srcset="">
+        </main>
+      </div>
+	</div>    

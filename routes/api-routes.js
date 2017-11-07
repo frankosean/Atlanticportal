@@ -12,4 +12,12 @@ module.exports = function(app){
           res.render("index", {truckloads: data});
         });
     });
+
+    app.get("/completed", function(req, res){
+        db.truckloads.findAll({}).then(function(data){
+            console.log(data);
+            res.render("completed", {truckloads: data});
+        });
+    });
 };
+
