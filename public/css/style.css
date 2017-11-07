@@ -15,7 +15,10 @@ body {
   }
 
 
-
+.navbar-brand {
+  height: 50px;
+  width:50px ;
+}
   #pic {
     margin-left: 300px;
     position: absolute;
