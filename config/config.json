@@ -1,6 +1,5 @@
 {
   "development": {
-<<<<<<< HEAD
     "username": "b9fa8f55bc4889",
     "password": "2c1cee2b",
     "port": "3306",
@@ -22,29 +21,6 @@
     "password": "2c1cee2b",
     "database": "heroku_1e1a3ef17e3ba90",
     "host": "us-cdbr-iron-east-05.cleardb.net",
-=======
-    "username": "root",
-    "password": "root",
-    "port": "8889",
-    "database": "truckloads",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": "root",
-    "port": "8889",
-    "database": "truckloads",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "port": "8889",
-    "password": "root",
-    "database": "truckloads",
-    "host": "127.0.0.1",
->>>>>>> 1df0f01136dd749701c8380c7f9998251d1e5472
     "dialect": "mysql"
   }
 }
