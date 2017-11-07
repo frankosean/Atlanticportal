@@ -33,11 +33,14 @@ require("./routes/add-lane-api.js")(app);
 //CSS 
 app.get("/css/style.css", function(req, res){
     res.sendFile(__dirname + "/public/css/style.css");
-})
+});
 
 app.get("/img/Atlantic-logo.png", function(req, res){
   res.sendFile(__dirname + "/public/img/Atlantic-logo.png");
-})
+});
+app.get("/img/Atlantic-logo.png", function(req, res){
+  res.sendFile(__dirname + "/public/img/atlantic_pkg.png");
+});
 
 
 //  SEQUELIZE SYNC 
