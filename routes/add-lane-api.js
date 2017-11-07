@@ -16,8 +16,12 @@ module.exports = function(app){
     app.post("/update/:id", function(req, res){
         const id = req.params.id;
         const statusInput = req.body.statusInput;
-        db.truckloads.find({
-            where: {id: id}
+        db.truckloads.update({
+            status: statusInput
+        },{
+            where: {
+                id: id
+            }
         }).then(req.body,{
             
         }).then(function(truckLoadsJson){
