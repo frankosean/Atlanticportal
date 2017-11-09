@@ -24,6 +24,8 @@ app.set("view engine", "handlebars");
 
 // Static directory
 app.use(express.static("public"));
+app.use(express.static('files'));
+
 
 // Routes
 require("./routes/html-routes.js")(app);
@@ -34,13 +36,13 @@ require("./routes/add-lane-api.js")(app);
 app.get("/css/style.css", function(req, res){
     res.sendFile(__dirname + "/public/css/style.css");
 });
+app.get("/img/Atlantic-logo.png", function(req, res){
+  res.sendFile(__dirname + "/public/img/atlantic_pkg.jpg");
+});
+app.get("/img/Atlantic-logo.png", function(req, res){
+  res.sendFile(__dirname + "/public/img/Atlantic-logo.jpg");
+});
 
-app.get("/img/Atlantic-logo.png", function(req, res){
-  res.sendFile(__dirname + "/public/img/Atlantic-logo.png");
-});
-app.get("/img/Atlantic-logo.png", function(req, res){
-  res.sendFile(__dirname + "/public/img/atlantic_pkg.png");
-});
 
 
 //  SEQUELIZE SYNC 
