@@ -9,13 +9,15 @@
     "method-override": "^2.3.10",
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
+    "nodemon": "^1.12.1",
     "path": "^0.12.7",
     "sequelize": "^4.15.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --inspect=2020 server.js"
+    "start": "node --inspect=2020 server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
