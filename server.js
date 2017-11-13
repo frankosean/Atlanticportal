@@ -2,8 +2,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
-var { Client } = require('pg');
-
 
 // EXPRESS 
 var app = express();
@@ -45,21 +43,6 @@ app.get("/img/Atlantic-logo.png", function(req, res){
   res.sendFile(__dirname + "/public/img/Atlantic-logo.jpg");
 });
 
-// added wakeup feature to prevent 30 minutes idle  issue
-var reqTimer = setTimeout(function wakeUp() {
-  request("https://atlanticpackage.herokuapp.com/", function() {
-     console.log("WAKE UP DYNO");
-  });
-  return reqTimer = setTimeout(wakeUp, 1200000);
-}, 1200000);
-
-// 
-var db = new Client({
-  connectionString: process.env.db,
-  ssl: true,
-});
-
-db.connect();
 
 //  SEQUELIZE SYNC 
 db.sequelize.sync({ force: true }).then(function() {
