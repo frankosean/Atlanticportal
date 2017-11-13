@@ -2,6 +2,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
+var { Client } = require('pg');
+
 
 // EXPRESS 
 var app = express();
@@ -50,6 +52,14 @@ var reqTimer = setTimeout(function wakeUp() {
   });
   return reqTimer = setTimeout(wakeUp, 1200000);
 }, 1200000);
+
+// 
+var db = new Client({
+  connectionString: process.env.db,
+  ssl: true,
+});
+
+db.connect();
 
 //  SEQUELIZE SYNC 
 db.sequelize.sync({ force: true }).then(function() {
