@@ -7,7 +7,11 @@ var app = express();
 module.exports = function(app){
 
     app.get("/", function(req, res) {
-        db.truckloads.findAll({}).then(function(data) {
+        db.truckloads.findAll({
+            where:{
+                isComplete: 0
+            }
+        }).then(function(data) {
           console.log(data);
           res.render("index", {truckloads: data});
         });

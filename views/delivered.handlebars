@@ -64,6 +64,7 @@
                   <th>PickUp Number</th>
                   <th>PO Number</th>
                   <th>Additional Info</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -78,6 +79,12 @@
                   <td>{{this.pickUpNumber}}</td>
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additionalInfo}}</td>
+                  {{!-- Delete --}}
+                  <form action="/{{this.id}}" method="POST">
+                  <span>
+          				  <td><button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button></td>
+                  </span>
+                  </form>
                 </tr>
                 {{/each}}
               </container>

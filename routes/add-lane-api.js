@@ -29,7 +29,7 @@ module.exports = function(app){
         });
     })
 
-    // Delete Load
+    // Delete Load 
     app.post("/:id", function(req, res){
         db.truckloads.destroy({
             where: {
@@ -40,7 +40,7 @@ module.exports = function(app){
         });
     });
 
-    // Complete Load => Move to delivered Loads
+    // Complete Load => Move to Delivered Loads
     app.post("/delivered/:id", function(req, res){
         db.truckloads.update({
             isComplete: 1,
