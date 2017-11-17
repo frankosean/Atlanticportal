@@ -40,17 +40,17 @@ module.exports = function(app){
         });
     });
 
-    // Complete Load => Move to Completed Loads
-    app.post("/completed/:id", function(req, res){
-        db.truckloads.update(req.params,
-        {
+    // Complete Load => Move to delivered Loads
+    app.post("/delivered/:id", function(req, res){
+        db.truckloads.update({
+            isComplete: 1,
+        },{
             where: {
-                id: req.params.id,
-                
+                id: req.params.id
             }
         })
             .then(function(truckLoadsJson){
-                res.redirect("/completed")
+                res.redirect("/delivered")
             });
         });
 };

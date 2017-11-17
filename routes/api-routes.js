@@ -13,10 +13,14 @@ module.exports = function(app){
         });
     });
 
-    app.get("/completed", function(req, res){
-        db.truckloads.findAll({}).then(function(data){
+    app.get("/delivered", function(req, res){
+        db.truckloads.findAll({
+            where:{
+                isComplete: 1,
+            }
+        }).then(function(data){
             console.log(data);
-            res.render("completed", {truckloads: data});
+            res.render("delivered", {truckloads: data});
         });
     });
 };

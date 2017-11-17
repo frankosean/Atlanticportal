@@ -30,7 +30,7 @@
               <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
             </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="/completed">Completed Loads</a>
+              <a class="nav-link" href="/delivered">Delivered Loads</a>
             </li> 
           </ul>
 
@@ -74,7 +74,7 @@
                   <th>PickUp Number</th>
                   <th>PO Number</th>
                   <th>Additional Info</th>
-                  {{!-- <th>Complete</th> --}}
+                  <th>Complete</th>
                   <th>Delete</th>
                 </tr>
               </thead>
@@ -100,11 +100,11 @@
                   <td>{{this.poNumber}}</td>
                   <td>{{this.additionalInfo}}</td>
                   {{!-- Complete --}}
-                  {{!-- <form action="/completed/:{{this.id}}" method="POST">
+                  <form action="/delivered/{{this.id}}" method="POST">
                   <span>
-          				  <td><button id="completed" class="btn btn-primary btn-lg" type="submit">Complete</button></td>
+          				  <td><button id="delivered" class="btn btn-primary btn-lg" type="submit">Complete</button></td>
                   </span>
-                  </form> --}}
+                  </form>
                   {{!-- Delete --}}
                   <form action="/{{this.id}}" method="POST">
                   <span>
