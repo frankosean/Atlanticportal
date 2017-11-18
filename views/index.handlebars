@@ -74,7 +74,7 @@
                   <th>PickUp Number</th>
                   <th>PO Number</th>
                   <th>Additional Info</th>
-                  <th>Complete</th>
+                  <th>Delivered</th>
                   <th>Delete</th>
                 </tr>
               </thead>
@@ -102,11 +102,11 @@
                   {{!-- Complete --}}
                   <form action="/delivered/{{this.id}}" method="POST">
                   <span>
-          				  <td><button id="delivered" class="btn btn-primary btn-lg" type="submit">Complete</button></td>
+          				  <td><button id="delivered" class="btn btn-primary btn-lg" type="submit">Delivered</button></td>
                   </span>
                   </form>
                   {{!-- Delete --}}
-                  <form action="/{{this.id}}" method="POST">
+                  <form action="delete/open/{{this.id}}" method="POST">
                   <span>
           				  <td><button id="delete" class="btn btn-primary btn-lg" type="submit">Delete</button></td>
                   </span>

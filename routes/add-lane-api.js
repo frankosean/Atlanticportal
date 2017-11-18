@@ -29,14 +29,25 @@ module.exports = function(app){
         });
     })
 
-    // Delete Load 
-    app.post("/:id", function(req, res){
+    // Delete Load on Active Loads
+    app.post("/delete/open/:id", function(req, res){
         db.truckloads.destroy({
             where: {
                 id: req.params.id
             }
         }).then(function(truckLoadsJson){
             res.redirect("/");
+        });
+    });
+
+    // Delete Load on Active Loads
+    app.post("/delete/delivered/:id", function(req, res){
+        db.truckloads.destroy({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(truckLoadsJson){
+            res.redirect("/delivered");
         });
     });
 

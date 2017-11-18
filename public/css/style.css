@@ -34,6 +34,11 @@ body {
   #buttonUpdateTruckload{
     margin-left: 20px !important;
   }
+
+  #delete {
+    background-color: red;
+    border-color: red;
+  }
   
    .modal-title {
     margin-right: 150px;
