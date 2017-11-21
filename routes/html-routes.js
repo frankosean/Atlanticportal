@@ -16,11 +16,11 @@ module.exports = function(app){
 
     // Route Team Page
     app.get("/team", function(req, res){
-        res.render("team")
+        res.render("team");
     });
 
     // Route Complted Loads
     app.get("/completed", function(req, res){
-        res.render("completed")
+        res.render("completed");
     });
-}
+};
